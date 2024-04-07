@@ -34,7 +34,8 @@ export const fetchSuggestions = async (
       },
       body: JSON.stringify({ query: searchText, count: 3 }),
     });
-    if (!response.ok) throw new Error("Я упал fetchSuggestions");
+    if (!response.ok)
+      throw new Error("Не удалось получить предложение с dadata.ru (ФИО)");
     const data: IFetchSuggestions =
       (await response.json()) as IFetchSuggestions;
 
