@@ -2,9 +2,9 @@ import { Button, Form } from "antd";
 
 const SubmitButton = () => {
   return (
-    <Form.Item name="register" wrapperCol={{ offset: 8 }}>
+    <Form.Item name="register">
       <Button block type="primary" htmlType="submit">
-        Register
+        Зарегистрироваться
       </Button>
     </Form.Item>
   );

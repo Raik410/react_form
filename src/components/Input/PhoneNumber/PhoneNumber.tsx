@@ -29,13 +29,15 @@ export const PhoneNumber: FC<PropsPhoneNumber> = ({ value, onChange }) => {
   return (
     <Form.Item
       name="phone"
-      label="Phone Number"
+      label="Номер телефона"
+      hasFeedback={true}
       rules={[
-        { required: true, message: "Please input your phone number." },
+        { required: true, message: "Пожалуйста введите ваш номер." },
         { whitespace: true },
         {
-          pattern: /^\+7 \d{3} \d{3} \d{2} \d{2}$/,
-          message: "Phone number must be in the format +7 XXX XXX XX XX.",
+          pattern:
+            /^(?:\+7|8)[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/,
+          message: "Номер должен быть в формате +7 XXX XXX XX XX.",
         },
       ]}
     >

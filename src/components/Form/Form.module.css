@@ -1,10 +1,20 @@
 .main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
+    max-width: 450px;
 }
 
 .form {
     box-sizing: border-box;
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    border-radius: 15px;
+}
+
+.form__submit {
+    align-self: center;
 }

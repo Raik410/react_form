@@ -4,10 +4,10 @@ const DateBirth = () => {
   return (
     <Form.Item
       name="dateofbirth"
-      label="Date of birth"
-      rules={[{ required: true }]}
+      label="Дата рождения"
+      rules={[{ required: true, message: "Пожалуйста введите вашу дату." }]}
     >
-      <DatePicker picker="date" placeholder="Pick a date" />
+      <DatePicker picker="date" placeholder="2000-01-01" />
     </Form.Item>
   );
 };

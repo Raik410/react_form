@@ -32,7 +32,7 @@ export const fetchSuggestions = async (
         Accept: "application/json",
         Authorization: `Token ${token}`,
       },
-      body: JSON.stringify({ query: searchText }),
+      body: JSON.stringify({ query: searchText, count: 3 }),
     });
     if (!response.ok) throw new Error("Я упал fetchSuggestions");
     const data: IFetchSuggestions =

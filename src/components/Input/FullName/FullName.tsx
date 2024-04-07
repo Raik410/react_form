@@ -28,24 +28,25 @@ const FullName: FC<PropsFullName> = ({ value, onChange }) => {
     onChange(value);
   };
 
-  const debouncedFetchSuggestions = useDebounce(handleSearch, 500);
+  const debouncedFetchSuggestions = useDebounce(handleSearch, 275);
 
   return (
     <Form.Item
       name="fullname"
-      label="Fullname"
+      label="Фамилия Имя Отчество"
       rules={[
-        { required: true, message: "Please input your full name." },
-        { min: 5 },
+        { required: true, message: "Введите ваше полное имя" },
+        { min: 5, max: 50, message: "Длина должна быть от 5 до 50 символов" },
         { whitespace: true },
       ]}
+      hasFeedback={true}
     >
       <AutoComplete
         value={value}
         onSelect={handleSelect}
         onSearch={debouncedFetchSuggestions}
         options={options}
-        placeholder="Введите ФИО"
+        placeholder="Петрович Петя Иванов"
       />
     </Form.Item>
   );
