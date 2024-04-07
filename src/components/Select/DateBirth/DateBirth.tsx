@@ -5,9 +5,11 @@ const DateBirth = () => {
     <Form.Item
       name="dateofbirth"
       label="Дата рождения"
-      rules={[{ required: true, message: "Пожалуйста введите вашу дату." }]}
+      rules={[
+        { required: true, message: "Пожалуйста введите вашу дату рождения." },
+      ]}
     >
-      <DatePicker picker="date" placeholder="2000-01-01" />
+      <DatePicker allowClear picker="date" placeholder="2000-01-01" />
     </Form.Item>
   );
 };

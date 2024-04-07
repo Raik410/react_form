@@ -4,11 +4,11 @@ const { Option } = Select;
 
 const Doctor = () => {
   return (
-    <Form.Item name="doctor" label="Doctor" rules={[{ required: true }]}>
+    <Form.Item name="doctor" label="Лечащий врач">
       <Select placeholder="Лечащий врач" allowClear>
-        <Option value="Петров">Мужчина</Option>
-        <Option value="Захаров">Женщина</Option>
-        <Option value="Черниговская">Другое</Option>
+        <Option value="Петров">Петров</Option>
+        <Option value="Захаров">Захаров</Option>
+        <Option value="Черниговская">Черниговская</Option>
       </Select>
     </Form.Item>
   );

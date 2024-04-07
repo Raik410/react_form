@@ -4,12 +4,7 @@ const { Option } = Select;
 
 const Gender = () => {
   return (
-    <Form.Item
-      name="gender"
-      label="Пол"
-      rules={[{ required: true, message: "Пожалуйста введите ваш пол." }]}
-      hasFeedback={true}
-    >
+    <Form.Item name="gender" label="Пол" hasFeedback={true}>
       <Select placeholder="Ваш пол" allowClear>
         <Option value="male">Мужчина</Option>
         <Option value="female">Женщина</Option>

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "antd": "^5.16.1",
+    "antd-phone-input": "^0.3.5",
     "dotenv": "^16.4.5",
     "react": "^18.2.0",
     "react-dadata": "^2.23.1",

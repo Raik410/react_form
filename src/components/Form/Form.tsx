@@ -1,12 +1,13 @@
 import styles from "./Form.module.css";
 import { Form, Button, message } from "antd";
 import FullName from "../Input/FullName/FullName";
-import { PhoneNumber } from "../Input/PhoneNumber/PhoneNumber";
 import DateBirth from "../Select/DateBirth/DateBirth";
 import Gender from "../Select/Gender/Gender";
 import ClientGroup from "../Select/ClientGroup/ClientGroup";
 import SmsVerify from "../Checkbox/smsVerify/smsVerify.tsx";
 import { FormData, ValidateErrorEntity } from "./types";
+import PhoneNumber from "../Input/PhoneNumber/PhoneNumber.tsx";
+import Doctor from "../Select/Doctor/Doctor.tsx";
 
 const Main = () => {
   const [form] = Form.useForm();
@@ -26,21 +27,20 @@ const Main = () => {
       <Form
         form={form}
         className={styles.form}
-        // labelCol={{ span: 8 }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         layout="vertical"
       >
-        <FullName value="" onChange={() => {}} />
+        <FullName />
         <DateBirth />
-        <PhoneNumber value="" onChange={() => {}} />
+        <PhoneNumber />
         <ClientGroup />
+        <Doctor />
         <Gender />
         <SmsVerify />
         <Form.Item>
           <Button
             className={styles.form__submit}
-            style={{ display: "block", margin: "0 auto" }}
             type="primary"
             htmlType="submit"
           >

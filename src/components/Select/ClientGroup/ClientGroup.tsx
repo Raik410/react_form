@@ -9,8 +9,13 @@ const options: SelectProps["options"] = [
 
 const ClientGroup = () => {
   return (
-    <Form.Item name="cliendgroup" label="Ваша группа">
+    <Form.Item
+      name="cliendgroup"
+      label="Ваша группа"
+      rules={[{ required: true, message: "Пожалуйста выберите вашу группу." }]}
+    >
       <Select
+        allowClear
         mode="tags"
         // style={{ width: "100%" }}
         placeholder="Выберите справа"
